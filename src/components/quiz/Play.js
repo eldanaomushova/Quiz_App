@@ -84,7 +84,6 @@ class Play extends Component {
             this.wrongAnswer();
         }
     }
-
     handleNextButtonClick = () => {
         this.playButtonSound();
         if (this.state.nextQuestion !== undefined) {
@@ -95,7 +94,6 @@ class Play extends Component {
             });
         }
     };
-
     handlePreviousButtonClick = () => {
         this.playButtonSound();
         if (this.state.previousQuestion !== undefined) {
@@ -106,10 +104,9 @@ class Play extends Component {
             });
         }
     };
-
     handleQuitButtonClick = () => {
         this.playButtonSound();
-        if (window.confirm('Are you sure you want to quit?')) {
+        if (window.confirm('are you sure you want to quit?')) {
             this.props.history.push('/');
         }
     };
