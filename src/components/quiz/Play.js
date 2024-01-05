@@ -174,24 +174,19 @@ class Play extends Component {
             }
         });
     }
-
     showOptions = () => {
         const options = Array.from(document.querySelectorAll('.option'));
-
         options.forEach(option => {
             option.style.visibility = 'visible';
         });
-
         this.setState({
             usedFiftyFifty: false
         });
     }
-
     handleHints = () => {
         if (this.state.hints > 0) {
             const options = Array.from(document.querySelectorAll('.option'));
             let indexOfAnswer;
-
             options.forEach((option, index) => {
                 if (option.innerHTML.toLowerCase() === this.state.answer.toLowerCase()) {
                     indexOfAnswer = index;
